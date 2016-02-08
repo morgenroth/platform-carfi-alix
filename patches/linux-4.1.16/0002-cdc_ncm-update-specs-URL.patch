@@ -1,0 +1,29 @@
+From c0bd285d93e810d5d1847df12f911cb7f34231c3 Mon Sep 17 00:00:00 2001
+From: Enrico Mioso <mrkiko.rs@gmail.com>
+Date: Sat, 11 Jul 2015 17:30:01 +0200
+Subject: [PATCH 2/9] cdc_ncm: update specs URL
+
+Update referenced specs link to reflect actual file version and location.
+
+Signed-off-by: Enrico Mioso <mrkiko.rs@gmail.com>
+Signed-off-by: David S. Miller <davem@davemloft.net>
+---
+ drivers/net/usb/cdc_ncm.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/net/usb/cdc_ncm.c b/drivers/net/usb/cdc_ncm.c
+index 1991e4a..db40175 100644
+--- a/drivers/net/usb/cdc_ncm.c
++++ b/drivers/net/usb/cdc_ncm.c
+@@ -6,7 +6,7 @@
+  * Original author: Hans Petter Selasky <hans.petter.selasky@stericsson.com>
+  *
+  * USB Host Driver for Network Control Model (NCM)
+- * http://www.usb.org/developers/devclass_docs/NCM10.zip
++ * http://www.usb.org/developers/docs/devclass_docs/NCM10_012011.zip
+  *
+  * The NCM encoding, decoding and initialization logic
+  * derives from FreeBSD 8.x. if_cdce.c and if_cdcereg.h
+-- 
+2.5.0
+

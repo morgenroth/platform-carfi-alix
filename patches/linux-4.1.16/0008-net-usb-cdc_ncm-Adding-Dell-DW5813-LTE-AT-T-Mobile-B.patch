@@ -1,0 +1,38 @@
+From 055097db350c3f9b5a75e876b71989a704366ef2 Mon Sep 17 00:00:00 2001
+From: Daniele Palmas <dnlplm@gmail.com>
+Date: Fri, 18 Dec 2015 14:43:34 +0100
+Subject: [PATCH 8/9] net: usb: cdc_ncm: Adding Dell DW5813 LTE AT&T Mobile
+ Broadband Card
+
+Unlike DW5550, Dell DW5813 is a mobile broadband card with no ARP
+capabilities: the patch makes this device to use wwan_noarp_info struct
+
+Signed-off-by: Daniele Palmas <dnlplm@gmail.com>
+Signed-off-by: David S. Miller <davem@davemloft.net>
+---
+ drivers/net/usb/cdc_ncm.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/drivers/net/usb/cdc_ncm.c b/drivers/net/usb/cdc_ncm.c
+index 3a71e60..3694052 100644
+--- a/drivers/net/usb/cdc_ncm.c
++++ b/drivers/net/usb/cdc_ncm.c
+@@ -1567,6 +1567,15 @@ static const struct usb_device_id cdc_devs[] = {
+ 	  .driver_info = (unsigned long)&wwan_noarp_info,
+ 	},
+ 
++	/* DW5813 LTE AT&T Mobile Broadband Card
++	 * Unlike DW5550 this device requires FLAG_NOARP
++	 */
++	{ USB_DEVICE_AND_INTERFACE_INFO(0x413c, 0x81bc,
++		USB_CLASS_COMM,
++		USB_CDC_SUBCLASS_NCM, USB_CDC_PROTO_NONE),
++	  .driver_info = (unsigned long)&wwan_noarp_info,
++	},
++
+ 	/* Dell branded MBM devices like DW5550 */
+ 	{ .match_flags = USB_DEVICE_ID_MATCH_INT_INFO
+ 		| USB_DEVICE_ID_MATCH_VENDOR,
+-- 
+2.5.0
+

@@ -1,2 +1,10 @@
 mptcp.patch
-fix-huawei-3372s-ncm.patch
+0001-cdc_ncm-Add-support-for-moving-NDP-to-end-of-NCM-fra.patch
+0002-cdc_ncm-update-specs-URL.patch
+0003-CDC-common-parser-for-extra-headers.patch
+0004-cdc-ncm-use-common-parser.patch
+0005-net-cdc_ncm-fix-NULL-pointer-deref-in-cdc_ncm_bind_c.patch
+0006-net-cdc_mbim-add-NDP-to-end-quirk-for-Huawei-E3372.patch
+0007-net-usb-cdc_ncm-Adding-Dell-DW5812-LTE-Verizon-Mobil.patch
+0008-net-usb-cdc_ncm-Adding-Dell-DW5813-LTE-AT-T-Mobile-B.patch
+0009-net-cdc_ncm-avoid-changing-RX-TX-buffers-on-MTU-chan.patch
